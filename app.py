@@ -25,7 +25,8 @@ def main():
    message = item["message"]["text"]
    message = unshortener.unshorten(message)
    requests.get("https://api.telegram.org/bot857617376:AAFX-IATq2rEKPsKcW7ylkhe_pA7jOZZeK0/sendMessage?chat_id=478322885&text={}".format(message))
-   return message
+   
+ return message
     
 
 #def hello_world():
