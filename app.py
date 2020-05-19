@@ -14,10 +14,10 @@ app = Flask(__name__)
 def main():
  unshortener = UnshortenIt() 
  
- while True:
+ #while True:
   updates = requests.get("https://api.telegram.org/bot857617376:AAFX-IATq2rEKPsKcW7ylkhe_pA7jOZZeK0/getUpdates")
   offset = updates[0]["update_id"]
-  for item in updates:
+  #for item in updates:
    
    updates = requests.get("https://api.telegram.org/bot857617376:AAFX-IATq2rEKPsKcW7ylkhe_pA7jOZZeK0/getUpdates?offset={}".format(offset+1))
    updates = json.loads(updates.content)
